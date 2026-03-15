@@ -8,5 +8,5 @@
 ### Helicopter in Flight
 ![Helicopter Fly](Screenshot/heli2.png)
 
-### Helicopter Angle View
+### Helicopter Angular View
 ![Helicopter Angle](Screenshot/heli3.png)
