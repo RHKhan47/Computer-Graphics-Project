@@ -1,6 +1,7 @@
-# Computer-Graphics-Project
+# Computer Graphics Project
 
 ## 📸 Project Demo
-![Helicopter](screenshots/heli.png)
-![Helicopter fly](screenshots/heli fly.png)
-![Helicopter angle](screenshots/ss1.png)
+
+| Helicopter Model | Helicopter in Flight | Angle View |
+|------------------|---------------------|------------|
+| ![](Screenshot/heli.png) | ![](Screenshot/heli%20fly.png) | ![](Screenshot/ss1.png) |
