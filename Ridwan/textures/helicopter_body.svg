@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#555555" />
+      <stop offset="50%" stop-color="#888888" />
+      <stop offset="100%" stop-color="#444444" />
+    </linearGradient>
+    <pattern id="metalPattern" width="64" height="64" patternUnits="userSpaceOnUse">
+      <rect width="64" height="64" fill="url(#metalGradient)" />
+      <path d="M0 16 L64 16" stroke="#666666" stroke-width="1" />
+      <path d="M0 32 L64 32" stroke="#777777" stroke-width="1" />
+      <path d="M0 48 L64 48" stroke="#666666" stroke-width="1" />
+      <path d="M16 0 L16 64" stroke="#666666" stroke-width="1" />
+      <path d="M32 0 L32 64" stroke="#777777" stroke-width="1" />
+      <path d="M48 0 L48 64" stroke="#666666" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="512" height="512" fill="url(#metalPattern)" />
+  <rect x="128" y="128" width="256" height="256" fill="#333333" opacity="0.3" />
+  <text x="256" y="256" font-family="Arial" font-size="32" text-anchor="middle" fill="#ffffff">RESCUE</text>
+  <path d="M128 384 L384 384" stroke="#ff0000" stroke-width="8" />
+  <path d="M128 400 L384 400" stroke="#ff0000" stroke-width="8" />
+</svg>

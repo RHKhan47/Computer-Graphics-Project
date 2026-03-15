@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Helicopter Simulation</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="info">
+        Press SPACE to start/stop the helicopter<br>
+        Use ARROW KEYS to control helicopter movement<br>
+        Use MOUSE to rotate the light around the helicopter
+    </div>
+
+    <!-- Vertex Shader -->
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        varying vec3 vNormal;
+        varying vec3 vPosition;
+
+        void main() {
+            vUv = uv;
+            vNormal = normalize(normalMatrix * normal);
+            vPosition = position;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    </script>
+
+    <!-- Fragment Shader -->
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        uniform sampler2D texture1;
+        uniform float time;
+        varying vec2 vUv;
+        varying vec3 vNormal;
+        varying vec3 vPosition;
+
+        void main() {
+            vec4 texColor = texture2D(texture1, vUv);
+            
+            // Add some lighting effect
+            float lightIntensity = 0.5 + 0.5 * dot(vNormal, vec3(sin(time * 0.2), 1.0, cos(time * 0.2)));
+            
+            // Add subtle edge highlighting
+            float edgeFactor = 0.8 + 0.2 * (1.0 - abs(dot(vNormal, vec3(0.0, 0.0, 1.0))));
+            
+            // Combine effects
+            vec3 finalColor = texColor.rgb * lightIntensity * edgeFactor;
+            
+            gl_FragColor = vec4(finalColor, 1.0);
+        }
+    </script>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Main Script -->
+    <script src="js/helicopter.js"></script>
+</body>
+</html>
