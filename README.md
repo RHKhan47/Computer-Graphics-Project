@@ -3,10 +3,10 @@
 ## 📸 Project Demo
 
 ### Helicopter Model
-![Helicopter](Screenshot/heli.png)
+![Helicopter](Screenshot/heli1.png)
 
 ### Helicopter in Flight
-![Helicopter Fly](Screenshot/heli%20fly.png)
+![Helicopter Fly](Screenshot/heli2.png)
 
 ### Helicopter Angle View
-![Helicopter Angle](Screenshot/ss1.png)
+![Helicopter Angle](Screenshot/heli3.png)
